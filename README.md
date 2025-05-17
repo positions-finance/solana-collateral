@@ -27,6 +27,22 @@ Positions Finance leverages this Solana Proof of Collateral system to:
 
 The protocol's events and proofs are utilized by Positions Finance to maintain an accurate, real-time record of collateralized assets, enabling safe lending against these positions.
 
+## How Positions Finance Works
+
+Positions Finance implements a modular, cross-chain architecture that revolves around the Proof of Collateral system to unlock liquidity from locked assets. According to their [technical architecture](https://docs.positions.finance/proof-of-collateral/technical-architecture), the platform operates through five key components:
+
+1. **Proof-of-Collateral NFT Contract**: This component verifies NFT ownership and manages collateralization by generating Merkle proofs that confirm ownership of assets. These proofs are essential for users to interact securely with the vaults and use their assets as collateral.
+
+2. **Positions Relayer Contract**: Serving as the backbone for cross-chain functionality, this contract maintains a global Merkle root that records ownership and collateral data. It processes incoming collateral requests and verifies their authenticity through a decentralized mechanism, enabling users to leverage their assets across different blockchain networks.
+
+3. **Yield-Bearing Vaults**: These vaults maximize asset efficiency by allowing users to deposit various assets and earn passive income while simultaneously using those assets as collateral. The vaults integrate with major DeFi protocols to enhance returns and provide continuous yield accrual.
+
+4. **Positions Relayer Nodes**: These nodes facilitate cross-chain communication by continuously monitoring deposit, withdrawal, and collateralization events. They ensure data consistency across all connected blockchains through decentralized consensus mechanisms, preventing single points of failure.
+
+5. **Monitoring and Liquidation System**: This system tracks the health of collateral positions using real-time data and executes automated liquidations when necessary. It also provides alerts to users about critical changes in their positions, maintaining overall platform stability.
+
+The Solana Proof of Collateral protocol serves as the bridge that enables this entire ecosystem to function seamlessly, providing the verifiable proofs of locked assets that Position Finance's cross-chain infrastructure relies on to facilitate borrowing, lending, and other DeFi activities.
+
 ## Architecture
 
 The system is built on three main components that work together to ensure security and efficiency:
